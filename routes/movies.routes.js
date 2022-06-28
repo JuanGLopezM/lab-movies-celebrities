@@ -1,10 +1,18 @@
 const router = require("express").Router();
 const Movie = require("./../models/Movie.model");
+const Celebrity = require("./../models/Celebrity.model");
 require("../db");
 
 // crear
 router.get("/movies/create", (req, res, next) =>
-  res.render("movies/new-movie")
+  Celebrity.find()
+    .then((response) => {
+      console.log(response);
+      res.render("movies/new-movie", { response });
+    })
+    .catch((err) => {
+      next(err);
+    })
 );
 
 router.post("/movies/create", (req, res, next) => {

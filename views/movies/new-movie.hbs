@@ -17,9 +17,9 @@
     {{!-- <input type="text" name="cast" /> --}}
   
   <select name="cast" id="cast" multiple>
-    {{#each cast}}
-  <option value="{{celebrity.name}}">{{celebrity.name}}</option>
-   {{/each}}
+    {{#each response}}
+  <option value="{{name}}">{{this.name}}</option>
+    {{/each}}
 </select>
   
   </label>
