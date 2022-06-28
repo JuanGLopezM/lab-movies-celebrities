@@ -1,0 +1,22 @@
+<h2>Lista de películas</h2>
+
+  {{#each response}}
+
+   
+    <b><p>{{this.title}}</p></b>
+    
+
+
+    {{!-- <p>-{{this.ocupation}}</p>
+
+    <p>-{{this.catchPhrase}}</p> --}}
+
+    {{!-- <a href="/drones/{{this._id}}/edit">Editar</a> --}}
+    
+
+    {{!-- <form action='/drones/{{_id}}/delete' method="POST">
+      <button type="submit">Borrar</button>
+    </form> --}}
+
+  {{/each}}
+  <a href="/">Volver</a>
