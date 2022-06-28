@@ -1,0 +1,13 @@
+<h2>Detalles películas</h2>
+
+<p>Título: {{title}}</p>
+<p>Género: {{genre}}</p>
+<p>Argumento: {{plot}}</p>
+
+  {{#each cast}}
+   <p>Cast name: {{this.name}}</p>
+   <p>Cast occupation: {{this.occupation}}</p>
+   <p>Cast catch phrase: {{this.catchPhrase}}</p>
+   
+  {{/each}}
+ <a href="/">Volver</a>

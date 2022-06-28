@@ -36,4 +36,17 @@ router.get("/movies", (req, res, next) => {
     });
 });
 
+router.get("/movies/:id", (req, res, next) => {
+  const { id } = req.params;
+  console.log(id);
+
+  Movie.findById(id)
+    .populate("cast")
+    .then((movieToEdit) => {
+      console.log("hola", movieToEdit);
+      res.render("movies/movie-details.hbs", movieToEdit);
+    })
+    .catch((error) => next(error));
+});
+
 module.exports = router;

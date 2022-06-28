@@ -12,7 +12,10 @@ const movieSchema = new mongoose.Schema({
     type: String,
   },
   cast: {
-    type: Array,
+    type: String,
+
+    // type: [mongoose.Schema.Types.ObjectId],
+    // ref: "Celebrity",
   },
 });
 
