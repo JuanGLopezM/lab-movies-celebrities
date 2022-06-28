@@ -12,10 +12,8 @@ const movieSchema = new mongoose.Schema({
     type: String,
   },
   cast: {
-    type: String,
-
-    // type: [mongoose.Schema.Types.ObjectId],
-    // ref: "Celebrity",
+    type: [mongoose.Schema.Types.ObjectId],
+    ref: "Celebrity",
   },
 });
 
